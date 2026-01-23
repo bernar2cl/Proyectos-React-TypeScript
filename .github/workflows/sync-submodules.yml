@@ -1,4 +1,4 @@
-name: 🔄 Sync Submodules
+name: 🔄 Sync Submodules — ${{ github.event.client_payload.submodule || 'manual/cron/push' }}
 
 on:
   workflow_dispatch:
