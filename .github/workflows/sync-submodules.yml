@@ -1,0 +1,32 @@
+name: 🔄 Sync Submodules
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo (with submodules)
+        uses: actions/checkout@v4
+        with:
+          submodules: recursive
+          fetch-depth: 0
+
+      - name: Set up Git user
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+
+      - name: Make script executable
+        run: chmod +x ./update-submodules.sh
+
+      - name: Run update-submodules.sh
+        run: ./update-submodules.sh
+
+      - name: Show git status
+        run: git status
