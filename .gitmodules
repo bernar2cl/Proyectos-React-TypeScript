@@ -16,3 +16,6 @@
 [submodule "04-hooks-app-React-TypeScript"]
 	path = 04-hooks-app-React-TypeScript
 	url = https://github.com/bernar2cl/04-hooks-app-React-TypeScript.git
+[submodule "07-teslo-shop-app-React-TypeScript-SWC"]
+	path = 07-teslo-shop-app-React-TypeScript-SWC
+	url = https://github.com/bernar2cl/07-teslo-shop-app-React-TypeScript-SWC.git
